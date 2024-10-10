@@ -1,0 +1,7 @@
+Flask
+Flask-JWT-Extended
+Flask-Cors
+Flask-SQLAlchemy
+Flask-Mail
+Werkzeug
+cryptography

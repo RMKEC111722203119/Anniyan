@@ -1,0 +1,163 @@
+/* Base styles for the login container (Lock body) */
+.login-container {
+  position: relative;
+  z-index: 2; /* Ensure login form stays in front */
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #1a1a1a; /* Form background color (dark metal) */
+  color: #fff; /* Text color */
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.8), inset 0 0 15px rgba(0, 0, 0, 0.9);
+  background: radial-gradient(circle, #1a1a1a 30%, #333 60%); /* Rough metal texture */
+  transition: all 0.5s ease;
+}
+
+/* Lock Hook (shackle above the lock body) */
+.lock-hook {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 80px;
+  background-color: #333; /* Dark molten metal appearance */
+  border: 5px solid #800000; /* Dark red border to emphasize the demonic look */
+  border-radius: 50%; /* Rounded hook */
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.8), inset 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+/* Style for the form input fields (Molten metal look) */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #333; /* Dark metal input field */
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Fiery glow when focused */
+}
+
+/* Style for the login button */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e60000;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+button:hover {
+  background-color: #ff0000;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 1); /* More intense fiery glow on hover */
+}
+
+/* Hell door animation container in the background */
+.door {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1; /* Set behind the login container */
+  overflow: hidden;
+  perspective: 800px;
+  background-image: url('../assests/loginbg.png'); /* Set your background image here */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the background */
+}
+
+/* Left door and right door styles */
+.left-door, .right-door {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.8); /* Semi-transparent red */
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7);
+  transition: all 1.5s ease; /* Slower, smoother animation */
+  transform-origin: center;
+}
+
+/* Left door specifics */
+.left-door {
+  left: 0;
+  transform: translateX(0);
+  transform-origin: left center;
+}
+
+/* Right door specifics */
+.right-door {
+  right: 0;
+  transform: translateX(0);
+  transform-origin: right center;
+}
+
+/* Door animation when opening */
+.door-open .left-door {
+  transform: rotateY(-100deg); /* Open to the left */
+}
+
+.door-open .right-door {
+  transform: rotateY(100deg); /* Open to the right */
+}
+
+/* Door remains closed until successful login */
+.door-closed .left-door, .door-closed .right-door {
+  transform: translateX(0);
+}
+
+/* Ensure login page styling */
+body {
+  background-image: url('../assests/loginbg.png');
+  object-fit: cover;
+   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Dark background for entire page */
+}
+
+p {
+  color: #ff6666; /* Message text color */
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+/* Ensure proper layout for login page */
+.login-page {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../assests/loginbg.png');
+}
+
+.login-navigate{
+  width: 25%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #280505;
+  color: white;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
