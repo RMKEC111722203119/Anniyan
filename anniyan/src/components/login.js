@@ -13,7 +13,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://127.0.0.1:5000/', { email, password },
+      const response = await axios.post('https://anniyan.vercel.app/', { email, password },
         {
           headers: {
             'Access-Control-Allow-Origin': '*',
