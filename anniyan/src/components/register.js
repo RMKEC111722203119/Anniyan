@@ -13,7 +13,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://127.0.0.1:5000/register', { email, password },
+      const response = await axios.post('https://anniyan.vercel.app//register', { email, password },
         {
           headers: {
             'Access-Control-Allow-Origin': '*',
