@@ -5,3 +5,4 @@ Flask-SQLAlchemy
 Flask-Mail
 Werkzeug
 cryptography
+vercel
