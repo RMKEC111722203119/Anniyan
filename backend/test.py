@@ -12,7 +12,7 @@ from config import ApplicationConfig
 
 
 
-genai.configure(api_key="AIzaSyCFPP7t83ltbDRzohTioAW_z7oSB2FmzK0")
+genai.configure(api_key="AIzaSyA4R1yeacyfFXex-_V_ddlg68i6RzQSpV8")
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
 app.config.from_object(ApplicationConfig)
@@ -87,7 +87,7 @@ Anniyan’s Response (English): "This negligence is unforgivable. When a person 
 For his negligence, I subjected him to the "Kumbhipaka" punishment—where he was boiled alive in oil—mirroring the suffering he caused by allowing the pothole to remain, symbolizing the fire of his guilt. You must face a similar fate, as per the scripture: 'Those who cause harm through neglect shall burn in the fires of their sins.
 """
 def get_gemini_repsonse(input):
-    model=genai.GenerativeModel('gemini-1.5-pro', system_instruction=sysprompt)
+    model=genai.GenerativeModel('gemini-1.5-flash', system_instruction=sysprompt,safety_settings=None)
     response=model.generate_content(input)
     return response.text
 
@@ -111,11 +111,11 @@ def process_input():
    
 
     # Select a random punishment
-    try:
-        punishment_text = anniyan(user_input)
+    # try:
+    punishment_text = anniyan(user_input)
 
-    except:
-        punishment_text = "I am sorry, I could not understand your input. Please try again."
+    # except:
+    #     punishment_text = " Please try again."
     # Return the punishment text as audio output
     return jsonify({'audio_output': punishment_text})
 

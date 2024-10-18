@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { franc } from 'franc-min';
+import { franc } from 'franc';
 
 const Content = () => {
   const [input, setInput] = useState('');
@@ -15,32 +15,34 @@ const Content = () => {
     try {
       const response = await axios.post('http://127.0.0.1:5000/api/process', {
         input: input,
-    }, {
+      }, {
         headers: {
-            Authorization: `Bearer ${localStorage.getItem('token')}` // Add the token in the Authorization header
+            Authorization: `Bearer ${localStorage.getItem('token')}`
         }
-    });;
+      });
 
       console.log('Response:', response.data); // Debugging: Log response data
 
       if (response.data.audio_output) {
-        // Detect language
+        // Detect language using franc
         const detectedLang = franc(input);
-        let langCode = 'ta'; // Default to Tamil if no language detected
+        let langCode = 'te-IN'; // Default to Tamil (ta-IN) if no language detected
         
         // Map franc language codes to speech synthesis language codes
         const languageMap = {
-          'tam': 'ta-IN',
-          'eng': 'en-US',     
+          'tam': 'ta-IN',  // Tamil
+          'eng': 'en-US',  // English
           'hin': 'hi-IN', 
-          'tel': 'te-IN', 
-    
-      };
-      
-
+          'tel': 'te-IN',
+          // Add more language mappings here as needed
+        };
+        
         // Set the language code based on detection
         if (languageMap[detectedLang]) {
           langCode = languageMap[detectedLang];
+          console.log('Detected language:', detectedLang, 'Language code:', langCode);
+        } else {
+          console.warn(`Language not recognized, defaulting to ${langCode}.`);
         }
 
         const utterance = new SpeechSynthesisUtterance(response.data.audio_output);
