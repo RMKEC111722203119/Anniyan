@@ -1,5 +1,5 @@
 class ApplicationConfig:
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:Nvignesh%402004@localhost/anniyan"
+    SQLALCHEMY_DATABASE_URI = "mysql://root:FTIBXdZvpPSkYCbuRMaCZSOXcptXmoBV@mysql.railway.internal:3306/railway"
     SQLALCHEMY_ECHO = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = 'yoursecretkey'
