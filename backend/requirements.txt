@@ -6,3 +6,4 @@ Flask-Mail
 Werkzeug
 cryptography
 vercel
+gunicorn
