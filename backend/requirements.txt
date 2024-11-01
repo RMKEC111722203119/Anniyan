@@ -9,3 +9,4 @@ vercel
 gunicorn
 google-generativeai
 pymysql
+MySQLdb
