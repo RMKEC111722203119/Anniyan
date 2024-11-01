@@ -7,3 +7,4 @@ Werkzeug
 cryptography
 vercel
 gunicorn
+google-generativeai
