@@ -8,3 +8,4 @@ cryptography
 vercel
 gunicorn
 google-generativeai
+pymysql
