@@ -13,7 +13,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://vercel.live/link/backend-git-main-rmkec111722203119s-projects.vercel.app?via=deployment-domains-list&p=1/', { email, password },
+      const response = await axios.post('https://anniyan2-i3a7x83ev-rmkec111722203119s-projects.vercel.app/', { email, password },
         {
           headers: {
             'Access-Control-Allow-Origin': '*',
