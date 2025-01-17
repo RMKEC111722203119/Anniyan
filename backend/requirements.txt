@@ -1,0 +1,9 @@
+Flask
+Flask-JWT-Extended
+Flask-Cors
+google-generativeai
+Werkzeug
+Flask-Mail
+mongoengine
+certifi
+python-dotenv

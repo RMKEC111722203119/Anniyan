@@ -1,0 +1,45 @@
+version: '3.7'
+
+services:
+  flask-app:
+    build: .
+    container_name: flask-app
+    ports:
+      - "8000:8000"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=test.py
+      - SQLALCHEMY_DATABASE_URI=mysql+pymysql://root:Nvignesh%402004@mysql-db:3306/anniyan
+      - SECRET_KEY=yoursecretkey
+      - JWT_SECRET_KEY=jwtsecretkey
+      - MAIL_SERVER=smtp.gmail.com
+      - MAIL_PORT=465
+      - MAIL_USERNAME=vign22112.it@rmkec.ac.in
+      - MAIL_PASSWORD="azcm lcuy exnq ffmo"
+      - MAIL_USE_TLS=False
+      - MAIL_USE_SSL=True
+    depends_on:
+      - mysql
+    networks:
+      - mynetwork
+
+  mysql:
+    image: mysql:8
+    container_name: mysql-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=Nvignesh%402004
+      - MYSQL_DATABASE=anniyan
+      # Removed MYSQL_USER and MYSQL_PASSWORD
+    ports:
+      - "3307:3306"
+    networks:
+      - mynetwork
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  mysql-data:
