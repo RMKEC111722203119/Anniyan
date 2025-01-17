@@ -1,0 +1,12 @@
+Flask
+Flask-JWT-Extended
+Flask-Cors
+Flask-SQLAlchemy
+Flask-Mail
+Werkzeug
+cryptography
+google-generativeai
+SQLAlchemy
+Flask-Mail
+pymysql
+Flask-Migrate
