@@ -13,7 +13,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://44.202.93.138:8000/', { email, password },
+      const response = await axios.post('https://anniyan-1.onrender.com/', { email, password },
         {
           headers: {
             'Access-Control-Allow-Origin': '*',
