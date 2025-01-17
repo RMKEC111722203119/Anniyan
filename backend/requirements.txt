@@ -7,3 +7,4 @@ Flask-Mail
 mongoengine
 certifi
 python-dotenv
+flask_migrate
