@@ -132,4 +132,4 @@ def process_input():
 if __name__ == '__main__':
     # Initialize MongoDB connection before starting the app
     initialize_mongodb()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=4000,debug=True)
