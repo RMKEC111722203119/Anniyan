@@ -13,7 +13,7 @@ const Content = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/process', {
+      const response = await axios.post('https://anniyan-1.onrender.com/api/process', {
         input: input,
       }, {
         headers: {
