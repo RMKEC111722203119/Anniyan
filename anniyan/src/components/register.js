@@ -13,7 +13,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://anniyan-1.onrender.com/register', { email, password },
+      const response = await axios.post('https://anniyan-97a3.onrender.com/register', { email, password },
         {
           headers: {
             'Access-Control-Allow-Origin': '*',
