@@ -13,7 +13,7 @@ const Content = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://anniyan-1.onrender.com/api/process', {
+      const response = await axios.post('https://anniyan-97a3.onrender.com/api/process', {
         input: input,
       }, {
         headers: {
