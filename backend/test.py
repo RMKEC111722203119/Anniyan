@@ -98,7 +98,7 @@ Anniyan’s Response (English): "This negligence is unforgivable. When a person 
 For his negligence, I subjected him to the "Kumbhipaka" punishment—where he was boiled alive in oil—mirroring the suffering he caused by allowing the pothole to remain, symbolizing the fire of his guilt. You must face a similar fate, as per the scripture: 'Those who cause harm through neglect shall burn in the fires of their sins.
 """
 def get_gemini_response(input):
-    model = genai.GenerativeModel('gemini-1.5-flash', system_instruction=sysprompt, safety_settings=None)
+    model = genai.GenerativeModel('gemini-2.0-flash', system_instruction=sysprompt, safety_settings=None)
     response = model.generate_content(input)
     return response.text
 
@@ -133,4 +133,5 @@ if __name__ == '__main__':
     # Initialize MongoDB connection before starting the app
     initialize_mongodb()
     app.run(host="0.0.0.0", port=4000,debug=True)
+
 
