@@ -15,7 +15,7 @@ import logging
 
 
 
-genai.configure(api_key="AIzaSyA4R1yeacyfFXex-_V_ddlg68i6RzQSpV8")
+genai.configure(api_key="AIzaSyAsg8c2TTiy6lFZmXh87dt8o-H4Cn6WzN8")
 app = Flask(__name__)
 
 CORS(app ,supports_credentials=True,origins="*")
@@ -133,3 +133,4 @@ if __name__ == '__main__':
     # Initialize MongoDB connection before starting the app
     initialize_mongodb()
     app.run(host="0.0.0.0", port=4000,debug=True)
+
