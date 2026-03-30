@@ -15,7 +15,7 @@ import logging
 
 
 
-genai.configure(api_key="AIzaSyAuO5XSpwUQpOF1a84_Ud9Bu4G0uCCIGr8")
+genai.configure(api_key="AIzaSyDkIVqtJFl-Vi2Nr5VWuhFVlHOa6Gr2QMI")
 app = Flask(__name__)
 
 CORS(app ,supports_credentials=True,origins="*")
